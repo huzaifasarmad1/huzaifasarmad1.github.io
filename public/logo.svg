@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brand" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1CD8D2"/>
+      <stop offset="0.5" stop-color="#00bf8f"/>
+      <stop offset="1" stop-color="#302b63"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="20" y1="12" x2="44" y2="52" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1CD8D2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#302b63" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base -->
+  <rect width="64" height="64" rx="16" fill="#070b12"/>
+
+  <!-- Gradient border frame -->
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="url(#brand)" stroke-width="2.5" fill="none" opacity="0.9"/>
+
+  <!-- Inner glow -->
+  <ellipse cx="32" cy="30" rx="22" ry="18" fill="url(#shine)"/>
+
+  <!-- HS monogram -->
+  <g filter="url(#glow)">
+    <!-- H -->
+    <rect x="15.5" y="21.5" width="3.6" height="23" rx="1" fill="url(#brand)"/>
+    <rect x="26.4" y="21.5" width="3.6" height="23" rx="1" fill="url(#brand)"/>
+    <rect x="15.5" y="31.2" width="14.5" height="3.2" rx="1.4" fill="url(#brand)"/>
+
+    <!-- S -->
+    <path
+      d="M47 26.5C47 23.2 44.2 21.5 40.5 21.5C36.6 21.5 33.8 23.7 33.8 27C33.8 30.4 36.6 31.6 40.6 32.6C44.4 33.5 46.4 34.8 46.4 37.8C46.4 41.2 43.6 43 40 43C36.3 43 33.6 41.4 33.6 38.3"
+      stroke="url(#brand)"
+      stroke-width="3.5"
+      stroke-linecap="round"
+      fill="none"
+    />
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="20" y="50" width="24" height="2.5" rx="1.25" fill="url(#brand)" opacity="0.85"/>
+</svg>
