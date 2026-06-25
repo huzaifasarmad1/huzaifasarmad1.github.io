@@ -54,7 +54,7 @@ export default function Experience() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-14 md:mb-16"
+          className="text-center max-w-2xl mx-auto mb-8 md:mb-10"
         >
           <span className="exp-label">Career Path</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mt-3">Experience</h2>

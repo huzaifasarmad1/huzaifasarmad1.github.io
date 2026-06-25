@@ -8,6 +8,8 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import WhyWorkWithMe from './components/WhyWorkWithMe';
+import Achievements from './components/Achievements';
 import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -26,6 +28,8 @@ export default function App() {
         <Skills />
         <Projects />
         <Experience />
+        <WhyWorkWithMe />
+        <Achievements />
         <Testimonials />
         <Contact />
       </main>

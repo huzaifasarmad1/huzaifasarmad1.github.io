@@ -135,7 +135,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="section min-h-screen flex flex-col items-center">
+    <section id="projects" className="section flex flex-col items-center">
       <ParticleCanvas />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-[#1CD8D2] to-[#302b63] opacity-10 blur-[140px]" />
@@ -146,7 +146,7 @@ export default function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-bold gradient-text mb-12"
+          className="text-4xl sm:text-5xl font-bold gradient-text mb-8 md:mb-10"
         >
           My Work
         </motion.h2>

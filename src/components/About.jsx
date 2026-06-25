@@ -13,62 +13,51 @@ export default function About() {
   ];
 
   return (
-    <section id="about" aria-label="About me" className="section min-h-screen flex items-center">
+    <section id="about" aria-label="About me" className="section">
       <ParticleCanvas />
       <GradientOrbs />
 
-      <div className="section-inner relative z-10 flex flex-col gap-12">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
+      <div className="section-inner relative z-10">
+        <motion.article
+          initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col md:flex-row items-center md:items-stretch gap-8"
+          transition={{ duration: 0.55 }}
+          className="about-card"
         >
-          <div className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-[#1CD8D2]/20 to-[#302b63]/20 border border-[#1CD8D2]/25 shrink-0">
-            <img src="/profile.jpg" alt={personalInfo.name} className="w-full h-full object-cover" />
+          <div className="about-card__top">
+            <div className="about-card__photo">
+              <img
+                src="/profile.jpg"
+                alt={personalInfo.name}
+                className="about-card__avatar"
+              />
+              <span className="about-card__status">Open to work</span>
+            </div>
+
+            <div className="about-card__body">
+              <span className="exp-label">About Me</span>
+              <h2 className="about-card__title gradient-text">{personalInfo.title}</h2>
+              <p className="about-card__bio">{personalInfo.bioIntro}</p>
+            </div>
           </div>
 
-          <div className="flex-1 flex flex-col justify-center text-center md:text-left">
-            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight gradient-text">
-              {personalInfo.name}
-            </h2>
-            <p className="mt-2 text-lg sm:text-xl text-white/90 font-semibold">{personalInfo.title}</p>
-            <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
-              {personalInfo.bio}
-            </p>
-
-            <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl mx-auto md:mx-0">
-              {stats.map((stat, i) => (
-                <motion.div
-                  key={stat.label}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center"
-                >
-                  <div className="text-sm text-gray-400">{stat.label}</div>
-                  <div className="text-base font-semibold text-white">{stat.value}</div>
-                </motion.div>
+          <div className="about-card__bottom">
+            <div className="about-card__stats">
+              {stats.map((stat) => (
+                <div key={stat.label} className="about-card__stat">
+                  <span className="about-card__stat-value">{stat.value}</span>
+                  <span className="about-card__stat-label">{stat.label}</span>
+                </div>
               ))}
             </div>
 
-            <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start">
-              <a
-                href="#projects"
-                className="inline-flex items-center justify-center rounded-lg bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition"
-              >
-                View Projects
-              </a>
-              <a
-                href="#contact"
-                className="inline-flex items-center justify-center rounded-lg border border-white/20 text-white font-semibold px-5 py-3 hover:bg-white/10 transition"
-              >
+            <div className="about-card__actions">
+              <a href="#contact" className="about-card__btn about-card__btn--fill">
                 Get in Touch
               </a>
 
-              <div className="flex items-center justify-center gap-4 text-2xl sm:ml-2">
+              <div className="about-card__socials">
                 {socials.map(({ href, icon: Icon, label }) => (
                   <a
                     key={label}
@@ -76,7 +65,7 @@ export default function About() {
                     target="_blank"
                     rel="noreferrer"
                     aria-label={label}
-                    className="text-gray-400 hover:text-[#1cd8d2] transition hover:scale-110"
+                    className="about-card__social"
                   >
                     <Icon />
                   </a>
@@ -84,22 +73,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="rounded-2xl border border-white/10 bg-white/5 p-8"
-        >
-          <h3 className="text-2xl font-bold gradient-text mb-4">About Me</h3>
-          {personalInfo.aboutExtra.map((text) => (
-            <p key={text.slice(0, 30)} className="text-gray-300 leading-relaxed mb-3 last:mb-0">
-              {text}
-            </p>
-          ))}
-        </motion.div>
+        </motion.article>
       </div>
     </section>
   );

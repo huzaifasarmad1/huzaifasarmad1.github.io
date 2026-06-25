@@ -76,7 +76,7 @@ export default function Testimonials() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl sm:text-5xl font-bold text-white text-center mb-12 md:mb-16"
+          className="text-4xl sm:text-5xl font-bold text-white text-center mb-8 md:mb-10"
         >
           What People Say
         </motion.h2>

@@ -5,7 +5,7 @@ import { personalInfo, serviceOptions } from '../data/portfolioData';
 import ParticleCanvas from './ParticleCanvas';
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', service: '', idea: '' });
+  const [form, setForm] = useState({ name: '', email: '', service: serviceOptions[0], idea: '' });
   const [status, setStatus] = useState('idle');
 
   const handleChange = (e) => {
@@ -36,7 +36,7 @@ export default function Contact() {
 
       if (data.success) {
         setStatus('success');
-        setForm({ name: '', email: '', service: '', idea: '' });
+        setForm({ name: '', email: '', service: serviceOptions[0], idea: '' });
         setTimeout(() => setStatus('idle'), 5000);
       } else {
         setStatus('error');
@@ -47,7 +47,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section min-h-screen">
+    <section id="contact" className="section">
       <ParticleCanvas />
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full bg-gradient-to-r from-[#1CD8D2] to-[#302b63] opacity-10 blur-[140px]" />
@@ -127,8 +127,7 @@ export default function Contact() {
               required
               className="px-4 py-3 rounded-lg bg-black/30 border border-white/10 text-white focus:border-[#1cd8d2] focus:outline-none transition"
             >
-              <option value="" disabled className="bg-black text-gray-400">Something in mind?</option>
-              {serviceOptions.slice(1).map((opt) => (
+              {serviceOptions.map((opt) => (
                 <option key={opt} value={opt} className="bg-black text-white">{opt}</option>
               ))}
             </select>

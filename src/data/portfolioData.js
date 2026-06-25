@@ -4,11 +4,8 @@ export const personalInfo = {
   title: 'Full Stack Software Engineer',
   tagline:
     'I turn ideas into web applications and mobile applications that are simple, effective, and built to make a real difference for users.',
-  bio: 'I\'m a full stack software engineer who builds scalable, production-ready web and mobile applications end to end. I specialize in robust backends with NestJS, Express.js, Node.js, and GraphQL, backed by PostgreSQL and MongoDB, while crafting clean, responsive frontends with React, Next.js, and Angular. From multi-tenant architectures to cloud deployments on AWS and GCP, I focus on clean architecture, performance, and great user experience.',
-  aboutExtra: [
-    'Results-driven software engineer with 5+ years of experience building and scaling web and mobile applications across startups and remote teams. At Codeswave, I develop multi-tenant platforms with NestJS, Express.js, and React, design PostgreSQL schemas and queries, and deploy services on AWS and GCP. I take features from concept to production while collaborating closely with teams on code reviews, performance, and reliability.',
-    'My toolkit spans TypeScript, JavaScript, and Python across the stack — Node.js, GraphQL, Docker, Kubernetes, Redis, and Apache Kafka on the backend, and React, Next.js, Angular, React-Native, and Ionic on the frontend. Beyond shipping features, I\'m passionate about backend engineering, cloud infrastructure, and building intelligent, API-driven systems.',
-  ],
+  bioIntro:
+    'Results-driven software engineer with 5+ years of experience building and scaling web and mobile applications for startups and remote teams. At Codeswave, I take products from concept to production — designing multi-tenant platforms, deploying on AWS and GCP, and collaborating on code reviews, performance, and reliability. I care about clean architecture, honest communication, and automation that saves teams real time.',
   email: 'huzaifasarmad3@gmail.com',
   web3formsKey: '684be902-67b5-4e3e-bf75-f29817161c44',
   resumeUrl: '/HuzaifaSarmad_resume.pdf',
@@ -29,31 +26,56 @@ export const stats = [
   { label: 'Focus', value: 'Scalable APIs & Cloud' },
 ];
 
-export const skills = [
-  'TypeScript',
-  'JavaScript',
-  'Python',
-  'React',
-  'Next.js',
-  'Angular',
-  'React Native',
-  'Ionic',
-  'Node.js',
-  'NestJS',
-  'Express.js',
-  'GraphQL',
-  'MongoDB',
-  'PostgreSQL',
-  'Redis',
-  'Firebase',
-  'WebSockets',
-  'Docker',
-  'Kubernetes',
-  'AWS',
-  'GCP',
-  'Nginx',
-  'Jenkins',
-  'Apache Kafka',
+export const skillCategories = [
+  {
+    title: 'Frontend',
+    skills: [
+      'Angular',
+      'React.js',
+      'Next.js',
+      'Redux',
+      'HTML/CSS/SASS',
+      'Material UI',
+      'Tailwind CSS',
+      'Kendo UI',
+      'Ant Design',
+      'Bootstrap',
+      'jQuery',
+    ],
+  },
+  {
+    title: 'Languages',
+    skills: ['JavaScript', 'TypeScript', 'Python'],
+  },
+  {
+    title: 'Backend & Frameworks',
+    skills: ['Node.js', 'Express.js', 'NestJS'],
+  },
+  
+  {
+    title: 'Mobile (Cross-Platform)',
+    skills: ['React Native', 'Ionic.js', 'Flutter'],
+  },
+  {
+    title: 'Databases',
+    skills: ['PostgreSQL', 'MongoDB', 'Redis'],
+  },
+  {
+    title: 'Third-Party Integrations',
+    skills: ['WebSockets', 'Twilio', 'Stripe', 'Firebase', 'OAuth'],
+  },
+  {
+    title: 'Automation & Testing',
+    skills: ['Git Flow & CI/CD', 'Postman', 'Swagger/OpenAPI', 'GoHighLevel', 'n8n', 'Make', 'Zapier'],
+  },
+  {
+    title: 'Cloud & Deployment',
+    skills: ['AWS', 'AWS Serverless/SAM', 'GCP'],
+  },
+  {
+    title: 'Containerization',
+    skills: ['Docker', 'Kubernetes'],
+  },
 ];
 
 export const projects = [
@@ -144,6 +166,40 @@ export const testimonials = [
   },
 ];
 
+export const whyWorkWithMe = [
+  'Scalable, clean, and production-ready development',
+  'Advanced AI agents and business automation systems',
+  'Real-time apps & API integrations',
+  'Clear communication with regular updates',
+  'Honest timelines and transparent communication',
+];
+
+export const whyWorkHighlight = {
+  title: 'AI Agents',
+  text: 'Smart automation systems that save hours of manual work every week',
+};
+
+export const achievements = [
+  {
+    highlight: '50+',
+    title: 'Projects Delivered',
+    description:
+      'Delivered 50+ projects across full stack development and automation with consistent 5-star feedback.',
+  },
+  {
+    highlight: 'AI',
+    title: 'Automation Systems',
+    description:
+      'Built AI agent and automation systems that cut manual work for clients across multiple industries.',
+  },
+  {
+    highlight: 'Weekly',
+    title: 'Workflow Automation',
+    description:
+      'Automated lead generation, customer communication, and operational workflows, saving clients hours of manual work every week.',
+  },
+];
+
 export const navLinks = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
@@ -154,8 +210,8 @@ export const navLinks = [
 ];
 
 export const serviceOptions = [
-  'Something in mind?',
   'Web Development',
   'Mobile Application',
+  'Automation (n8n, Make.com, GHL)',
   'Others',
 ];
